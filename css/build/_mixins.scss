@@ -1,0 +1,63 @@
+//font face mixin
+
+@mixin font-face($style-name, $file, $family) {
+    $filepath: "../fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+            url($filepath + ".woff") format('woff'),
+            url($filepath + ".ttf")  format('truetype'),
+            url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+
+}
+
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
+@mixin bp($point) {
+    @if $point == iphone-small {
+        @media (max-width: 320px) { @content; }
+    }
+    @if $point == iphone-portrait {
+        @media (max-width: 420px) { @content; }
+    }
+    @if $point == extra-small {
+        @media (max-width: 767px) { @content; }
+    }
+    @if $point == below-tablet {
+        @media (max-width: 991px) { @content; }
+    }
+    @if $point == above-tablet {
+        @media (min-width: 992px) { @content; }
+    }
+    @if $point == small-screens {
+        @media (min-width: 768px) { @content; }
+    }
+    @if $point == tablet {
+        @media (min-width: 768px) and (max-width: 991px) { @content; }
+    }
+    @if $point == tablet-landscape {
+        @media (min-width: 992px) and (max-width: 1199px) { @content; }
+    }
+    @if $point == medium-only {
+        @media (min-width: 768px) and (max-width: 1199px) { @content; }
+    }
+    @if $point == medium-screens {
+        @media (max-width: 1199px) { @content; }
+    }
+    @if $point == lg-screens {
+        @media (min-width: 1200px) { @content; }
+    }
+    @if $point == xl-screens {
+        @media (min-width: 1440px) { @content; }
+    }
+
+
+}
+
+
+

@@ -1,0 +1,25 @@
+//@include font-face($style-name, $file, $family);
+//$style-name being the name of the font e.g. Helvetica
+//$file meaning the file name, without the file extensions
+//$family being the folder inside the fonts folder where the font files are
+
+@include font-face('icomoon', 'icomoon', 'icomoon');
+@include font-face('AkzidenzGrotesk-Light', 'AkzidenzGrotesk-Light', 'akzidenzgrotesk');
+@include font-face('AkzidenzGrotesk-Medium', 'AkzidenzGrotesk-Medium', 'akzidenzgrotesk');
+
+
+/*Sass Variables---------------------------------------------------------------------------*/
+
+$icomoon: 'icomoon';
+$font-main: 'AkzidenzGrotesk-Light', sans-serif;
+$font-medium: 'AkzidenzGrotesk-Medium', sans-serif;
+
+$basecolor:#000000;
+$white:#ffffff;
+$darkgrey: #333333;
+$orange: #FF605D;
+
+
+
+
+

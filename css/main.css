@@ -298,8 +298,7 @@ section.hero .container-fluid {
 }
 
 section.hero .banner-layer-1 {
-  width: 43vw;
-  margin-left: 5vw;
+  width: 90vw;
 }
 
 section.hero .banner-layer-2 {
@@ -451,7 +450,33 @@ p.title span.seperator {
   color: var(--black);
 }
 
+@media (max-width: 575px) {
+  section.hero .container-fluid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  section.hero .banner-layer-3 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 20px 0 0 12%;
+    align-self: flex-start;
+  }
+  .services {
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+  }
+  .services li:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}
 @media (min-width: 576px) {
+  section.hero .banner-layer-1 {
+    width: 43vw;
+    margin-left: 5vw;
+  }
 }
 @media (min-width: 768px) {
   .container-fluid {
